@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Settings</title>
+</head>
+<body class="bg-gray-100 h-screen flex">
+    <div class="w-1/6 bg-purple-400 text-white relative">
+        <div class="border-r border-gray-300 absolute h-full top-0 right-0"></div>
+        <div class="mt-24">
+            <img src="/static/images/notepad.png" class="absolute left-0 top-0 mb-6">
+            <h2 class="p-6 text-2xl font-bold">Navigation</h2>
+            <ul>
+                <li class="mb-2">
+                    <a href="tasks.html" class="p-6 block hover:underline">
+                        <img src="/static/images/tasks-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Tasks
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="dashboard.html" class="p-6 block hover:underline">
+                        <img src="/static/images/dashboard-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Dashboard
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="profile.html" class="p-6 block hover:underline">
+                        <img src="/static/images/profile-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Profile
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="calendar.html" class="p-6 block hover:underline">
+                        <img src="/static/images/calendar-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Calendar
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="settings.html" class="p-6 block hover:underline">
+                        <img src="/static/images/settings-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Settings
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="my-6 w-full">
+        <h1 class="p-6 text-4xl font-extrabold ">Welcome Mufaddal</h1>
+        <div class="m-3 flex items-center">
+            <img src="/static/images/settings-icon.png" class="inline-block w-10 h-10 ">
+        <h2 class="p-6 text-3xl font-bold ">Settings</h2>
+    </div>
+        <div class="h-0.5 w-full bg-gray-600"></div>
+        <div>
+            
+    <div class="p-3 m-3 bg-gray border  shadow-lg">
+    <h2 class="font-bold">Theme Selection:</h2>
+    <form method="POST" action="/update_theme">
+        <label for="theme">Select Theme:</label>
+        <select name="theme" id="theme">
+            <option value="light">Light Theme</option>
+            <option value="dark">Dark Theme</option>
+        </select>
+        <button class="hover:scale-110 border ml-3 p-2 bg-gray-400 rounded-md" type="submit">Save Theme</button>
+    </form>
+</div>
+<div class="p-3 m-3 bg-gray border  shadow-lg">
+    <h2 class="font-bold">Email Preferences:</h2>
+    <form method="POST" action="/update_email_preferences">
+        <label for="subscribe_newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" name="subscribe_newsletter" id="subscribe_newsletter">
+        <label for="email_notifications">Receive Email Notifications:</label>
+        <input type="checkbox" name="email_notifications" id="email_notifications">
+        <button class="hover:scale-110 border ml-3 p-2 bg-gray-400 rounded-md", type="submit">Save Preferences</button>
+    </form>
+</div>
+<div class="p-3 m-3 bg-gray border  shadow-lg">
+    <h2 class="font-bold">Change Password</h2>
+    <form method="POST" action="/change_password">
+        <label for="current_password">Current Password:</label>
+        <input type="password" name="current_password" id="current_password" required>
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password" id="new_password" required>
+        <label for="confirm_password">Confirm New Password:</label>
+        <input type="password" name="confirm_password" id="confirm_password" required>
+        <button class="hover:scale-110 border ml-3 p-2 bg-gray-400 rounded-md" type="submit">Change Password</button>
+    </form>
+</div>
+        </div>
+    </div>
+</body>
+</html>
