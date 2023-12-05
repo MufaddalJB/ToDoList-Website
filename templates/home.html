@@ -8,44 +8,51 @@
     <title>Home</title>
 </head>
 <body class="bg-gray-100 h-screen flex">
-    <div class="w-1/6 bg-purple-400 text-white relative">
-        <div class="border-r border-gray-300 absolute h-full top-0 right-0"></div>
-        <div class="mt-24">
-            <img src="/static/images/notepad.png" class="absolute left-0 top-0 mb-6">
-            <h2 class="p-6 text-2xl font-bold">Navigation</h2>
+    <div class=" h-screen w-1/6 bg-purple-400 text-white relative ">
+        <div class="mt-40 h-screen  bg-purple-400 text-white  ">
+            <img src="/static/images/notepad.png" class="absolute left-0 top-10 mb-6">
+            <h2 class="mt-6 p-6 text-2xl font-bold">Navigation</h2>
             <ul>
+                <div class="h-0.5 w-full bg-white"></div>
                 <li class="mb-2">
-                    <a href="tasks.html" class="p-6 block hover:underline">
+                    <a href="/tasks" class="p-6 block hover:underline">
                         <img src="/static/images/tasks-icon.png" class="inline-block w-5 h-5 mr-2">
                         Tasks
                     </a>
                 </li>
                 <div class="h-0.5 w-full bg-white"></div>
                 <li class="mb-2">
-                    <a href="dashboard.html" class="p-6 block hover:underline">
-                        <img src="/static/images/dashboard-icon.png" class="inline-block w-5 h-5 mr-2">
-                        Dashboard
+                    <a href="/home" class="p-6 block hover:underline">
+                        <img src="/static/images/home-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Home
                     </a>
                 </li>
                 <div class="h-0.5 w-full bg-white"></div>
                 <li class="mb-2">
-                    <a href="profile.html" class="p-6 block hover:underline">
+                    <a href="/profile" class="p-6 block hover:underline">
                         <img src="/static/images/profile-icon.png" class="inline-block w-5 h-5 mr-2">
                         Profile
                     </a>
                 </li>
                 <div class="h-0.5 w-full bg-white"></div>
                 <li class="mb-2">
-                    <a href="calendar.html" class="p-6 block hover:underline">
+                    <a href="/calendar" class="p-6 block hover:underline">
                         <img src="/static/images/calendar-icon.png" class="inline-block w-5 h-5 mr-2">
                         Calendar
                     </a>
                 </li>
                 <div class="h-0.5 w-full bg-white"></div>
                 <li class="mb-2">
-                    <a href="settings.html" class="p-6 block hover:underline">
+                    <a href="/settings" class="p-6 block hover:underline">
                         <img src="/static/images/settings-icon.png" class="inline-block w-5 h-5 mr-2">
                         Settings
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/logout" class="p-6 block hover:underline">
+                        <img src="/static/images/logout-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Logout
                     </a>
                 </li>
                 <div class="h-0.5 w-full bg-white"></div>
@@ -53,8 +60,19 @@
         </div>
     </div>
     <div class="my-6 w-full">
-        <h1 class="p-6 text-4xl font-extrabold mb-12">Welcome Mufaddal</h1>
+        <h1 class="p-6 text-4xl font-extrabold ">Welcome {{user.name}}</h1>
+        <div class="m-3 flex items-center">
+            <img src="/static/images/home-icon.png" class="inline-block w-10 h-10 ">
+        <h2 class="p-6 text-3xl font-bold ">Home</h2> </div>
         <div class="h-0.5 w-full bg-gray-600"></div>
-    </div>
+        <div class="bg-blue-100 py-8 m-10 ">
+            <div class="container mx-auto p-4 text-center ">
+                <p class="text-3xl font-bold mb-4 text-blue-900">Welcome to MyToDoHub - Your Ultimate Productivity Companion!</p>
+                <p class="text-lg text-blue-800">Get ready to conquer your tasks and achieve your goals with our powerful to-do list platform. Whether you're a busy professional, a student, or anyone looking to stay organized, we've got you covered. Create, manage, and prioritize your tasks effortlessly, and experience a more productive and stress-free life.</p>
+                <p class="text-lg text-blue-800">With our user-friendly interface, customizable features, and seamless synchronization across devices, you'll have the perfect tool to stay on top of your responsibilities. Start adding tasks, setting deadlines, and tracking your progress today!</p>
+                <p class="text-lg text-blue-800">Join our community of motivated individuals who are taking control of their lives one task at a time. Let's make every day a success story together. Happy organizing!</p>
+            </div>
+        </div>
+        
 </body>
 </html>

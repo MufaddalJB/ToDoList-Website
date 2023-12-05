@@ -1,7 +1,6 @@
 {
   "name": "flask_mini_project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +12,15 @@
   "dependencies": {
     "css": "^3.0.0",
     "tailwind": "^4.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MufaddalJB/ToDoList-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MufaddalJB/ToDoList-Website/issues"
+  },
+  "homepage": "https://github.com/MufaddalJB/ToDoList-Website#readme",
+  "description": ""
 }

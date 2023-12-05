@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {% for todo in allTodo %}
+                  {
+                    title: "{{todo.title}}",
+                    start: "{{ todo.scheduled_datetime.strftime('%Y-%m-%d') }}",
+                },
+
+                {% endfor %}
+                ]
+                
+            });
+        calendar.render();
+        });
+
+    </script>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>Calendar</title>
+</head>
+
+<body class="bg-gray-100 h-screen flex">
+    <div class=" h-screen w-1/6 bg-purple-400 text-white relative ">
+        <div class="mt-40 h-screen  bg-purple-400 text-white  ">
+            <img src="/static/images/notepad.png" class="absolute left-0 top-10 mb-6">
+            <h2 class="mt-6 p-6 text-2xl font-bold">Navigation</h2>
+            <ul>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/tasks" class="p-6 block hover:underline">
+                        <img src="/static/images/tasks-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Tasks
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/home" class="p-6 block hover:underline">
+                        <img src="/static/images/home-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Home
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/profile" class="p-6 block hover:underline">
+                        <img src="/static/images/profile-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Profile
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/calendar" class="p-6 block hover:underline">
+                        <img src="/static/images/calendar-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Calendar
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/settings" class="p-6 block hover:underline">
+                        <img src="/static/images/settings-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Settings
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+                <li class="mb-2">
+                    <a href="/logout" class="p-6 block hover:underline">
+                        <img src="/static/images/logout-icon.png" class="inline-block w-5 h-5 mr-2">
+                        Logout
+                    </a>
+                </li>
+                <div class="h-0.5 w-full bg-white"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="my-6 w-full">
+        <h1 class="p-6 text-4xl font-extrabold ">Welcome {{user.name}}</h1>
+        <div class="m-3 flex items-center">
+            <img src="/static/images/calendar-icon.png" class="inline-block w-10 h-10 ">
+            <h2 class="p-6 text-3xl font-bold ">Calendar</h2>
+        </div>
+        <div class="h-0.5 w-full bg-gray-600"></div>
+        <div class="container mx-auto mt-4 w-1/2 h-1/2">
+            <div id="calendar"></div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

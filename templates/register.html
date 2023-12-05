@@ -10,24 +10,32 @@
 <body class="bg-gradient-to-r from-purple-400 to-pink-600 h-screen flex items-center justify-center">
     <div  class="w-full max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
         <h1 class="font-extrabold text-2xl my-2 mb-8">Register</h1>
-        <form >
+        <form action="/register" method="post">
+            <div class="mb-3">
+                <label for="name" class="block text-sm font-bold mb-2">Enter Name</label>
+                <input type="text" id="name" name="name" class="w-full border rounded-lg py-3 px-2">
+            </div>
+            <div class="mb-3">
+                <label for="number" class="block text-sm font-bold mb-2">Enter Phone Number</label>
+                <input type="number" id="number" name="number" class="w-full border rounded-lg py-3 px-2">
+            </div>
+            <div class="mb-3">
+                <label for="age" class="block text-sm font-bold mb-2">Enter Age</label>
+                <input type="number" id="age" name="age" class="w-full border rounded-lg py-3 px-2">
+            </div>
             <div class="mb-3">
             <label for="email"class=" block text-sm font-bold mb-2">Enter Email</label>
-            <input type="email" id="email" class="w-full border rounded-lg py-3 px-2">
-        </div>
-         <div class="mb-3">
-            <label for="number" class="block text-sm font-bold mb-2">Enter Phone Number</label>
-            <input type="number" id="number" class="w-full border rounded-lg py-3 px-2">
+            <input type="email" id="email"name="email" class="w-full border rounded-lg py-3 px-2">
         </div>
         <div class="mb-3">
             <label for="password" class="block text-sm font-bold mb-2">Enter Password</label>
-            <input type="password" id="password" class="w-full border rounded-lg py-3 px-2">
+            <input type="password" id="password" name="password" class="w-full border rounded-lg py-3 px-2">
         </div>
-        <div class="mb-6">
+        <!-- <div class="mb-6">
             <label for="password" class="block text-sm font-bold mb-2">Confirm Password</label>
             <input type="password" id="password" class="w-full border rounded-lg py-3 px-2">
-        </div>
-            <button class=" py-3 px-3 border rounded font-bold text-white bg-purple-700 hover:bg-blue-700 transition duration-300">Register</button>
+        </div> -->
+            <button type="submit" class=" py-3 px-3 border rounded font-bold text-white bg-purple-700 hover:bg-blue-700 transition duration-300">Register</button>
         </form>
     </div>
 </body>
